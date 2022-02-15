@@ -1,0 +1,13 @@
+.timer {
+    width: 20%;
+    /* display: flex; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 31px;
+    font-weight: 500;
+}
+.text {
+    font-size: 27px;
+}

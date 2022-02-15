@@ -1,0 +1,28 @@
+<div>
+    <mat-card style="background: darkslategrey;color: white">
+        <div class="flex">
+            <div style="width:60%;border-right: 1px solid white;">
+                <!-- <mat-form-field appearance="outline" class="w100"> -->
+                    <input class="form-input" [(ngModel)]="name" (change)="onChangeName()" />
+                <!-- </mat-form-field> -->
+            </div>
+            <div class="timer">
+                {{(this.hours > 9 ? this.hours : "0" + this.hours) + ':' + (this.minutes > 9 ? this.minutes : "0"+this.minutes) + ':' + (this.seconds > 9 ? this.seconds : "0" + this.seconds)}}
+            </div>
+            <div style="width: 20%;" class="flex space-around align-center">
+                <button (click)="startTimer();this.isPlayClicked=true" mat-raised-button *ngIf="!isPlayClicked" mat-icon-button matTooltip="Play">
+                    <mat-icon class="material-icons">play_circle_outline</mat-icon>
+                </button>
+                <button (click)="pauseTimer();this.isPlayClicked = false" mat-raised-button *ngIf="isPlayClicked" mat-icon-button matTooltip="Pause">
+                    <mat-icon class="material-icons">pause_circle_outline</mat-icon>
+                </button>
+                <button (click)="deleteProject()" mat-raised-button mat-icon-button matTooltip="Delete">
+                    <mat-icon class="material-icons">delete</mat-icon>
+                </button>
+                <button (click)="saveProject()" mat-raised-button mat-icon-button matTooltip="Save">
+                    <mat-icon class="material-icons">save</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-card>
+</div>

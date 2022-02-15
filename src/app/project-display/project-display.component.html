@@ -1,0 +1,19 @@
+<div>
+    <mat-card style="background: darkslategrey;color: white">
+        <div class="flex">
+            <div style="width:60%;border-right: 1px solid white;" class="flex align-center">
+                <div class="text">
+                    {{name}}
+                </div>
+            </div>
+            <div class="timer">
+                {{(this.hours > 9 ? this.hours : "0" + this.hours) + ':' + (this.minutes > 9 ? this.minutes : "0"+this.minutes) + ':' + (this.seconds > 9 ? this.seconds : "0" + this.seconds)}}
+            </div>
+            <div style="width: 20%;" class="flex space-around align-center">
+                <button (click)="playTimer();" mat-raised-button mat-icon-button matTooltip="Play">
+                    <mat-icon class="material-icons">play_circle_outline</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,26 @@
+.timer {
+    width: 20%;
+    /* display: flex; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 31px;
+    font-weight: 500;
+}
+.form-input {
+    background: darkslategray;
+    border: 1px solid white;
+    width: 90%;
+    height: 36px;
+    color: white;
+    font-size: 18px;
+    padding-left: 8px;
+    font-style: oblique;
+    border-radius: 4px;
+}
+.form-input:focus {
+    outline: none;
+    border: 2px solid white;
+
+}
