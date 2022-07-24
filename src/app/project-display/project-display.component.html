@@ -10,8 +10,11 @@
                 {{(this.hours > 9 ? this.hours : "0" + this.hours) + ':' + (this.minutes > 9 ? this.minutes : "0"+this.minutes) + ':' + (this.seconds > 9 ? this.seconds : "0" + this.seconds)}}
             </div>
             <div style="width: 20%;" class="flex space-around align-center">
-                <button (click)="playTimer();" mat-raised-button mat-icon-button matTooltip="Play">
+                <button (click)="playTimer();" *ngIf="shouldDisplayPlay" mat-raised-button mat-icon-button matTooltip="Play">
                     <mat-icon class="material-icons">play_circle_outline</mat-icon>
+                </button>
+                <button (click)="pauseTimer();" *ngIf="!shouldDisplayPlay" mat-raised-button mat-icon-button matTooltip="Pause">
+                    <mat-icon class="material-icons">pause_circle_outline</mat-icon>
                 </button>
             </div>
         </div>

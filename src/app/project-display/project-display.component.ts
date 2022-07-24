@@ -11,6 +11,9 @@ export class ProjectDisplayComponent implements OnInit {
   @Input() seconds: number = 0;
   @Input() name: string = '';
   @Output() play = new EventEmitter();
+  @Output() pause = new EventEmitter();
+
+  shouldDisplayPlay = true;
 
   constructor() { }
 
@@ -19,6 +22,11 @@ export class ProjectDisplayComponent implements OnInit {
 
   playTimer() {
     this.play.emit();
+    this.shouldDisplayPlay = false;
+  }
+  pauseTimer() {
+    this.shouldDisplayPlay = true;
+    this.pause.emit();
   }
 
 }

@@ -74,4 +74,9 @@ export class AppComponent {
       // this.openSnackBar('Project saved successfully');
     }
   }
+  pauseProject(index: number) {
+    if (index !== -1) {
+      this.saveProject(index);
+    }
+  }
 }
